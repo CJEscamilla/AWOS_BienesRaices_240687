@@ -1,15 +1,13 @@
 import express, { Router } from "express"
+import {formularioLogin, formularioRegistro} from '../controllers/usuarioControllers.js'
 
 const router = express.Router();
 
 // GET
-router.get("/", (req, res)=>{
-    res.json({
-        status:200, 
-        message: "Bienvenido al Sistema de Bienes Raices"
-    })
-})
+router.get("/login", formularioLogin)
+router.get("/login", formularioRegistro)
 
+    
 
 //POST
 router.post("/createUser", (req, res) =>

@@ -1,7 +1,7 @@
 {
   "name": "awos_bienesraices_240687",
   "version": "1.0.0",
-  "description": "---\r <p align=\"justify\">\r Sistema de Bienes Raíces basado en NodeJS, MVC y Api REST.</p>",
+  "description": "Sistema de Bienes Raíces basado en NodeJS, MVC y API REST",
   "keywords": [
     "MVC",
     "Sequelize",
@@ -11,23 +11,30 @@
     "TailwindCSS",
     "Leaflet"
   ],
-  "homepage": "https://github.com/CJEscamilla/AWOS_BienesRaices_240687#readme",
+  "homepage": "https://github.com/CJEscamilla/AWOS_BienesRaices_240687",
   "bugs": {
-    "url": "https://github.com/CJEscamilla/AWOS_BienesRaices_240687/issues"
+    "url": "https://github.com/CJEscamilla/AWOS_BienesRaices_240687"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CJEscamilla/AWOS_BienesRaices_240687.git"
+    "url": "https://github.com/CJEscamilla/AWOS_BienesRaices_240687"
   },
   "license": "ISC",
-  "author": "Cristopher Joseph Escamilla Vargas",
+  "author": "Cristopher Joseph Escamilla Vargas ",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "watch:css": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./public/css/styles.css --watch"
   },
   "dependencies": {
     "express": "^5.2.1",
-    "nodemon": "^3.1.11"
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "@tailwindcss/cli": "^4.1.18"
   }
 }
