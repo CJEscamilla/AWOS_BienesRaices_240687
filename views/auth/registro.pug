@@ -1,32 +1,35 @@
-extends ../layout/index
+extends ../layout/index 
 
 block contenido
-    div.py-10
-        h2.text-center.text-6xl.my-10.font-extrabold.text-orange-600 Bienes 
+    .py-10
+        h1.text-4xl.my-10.font-extrabold.text-center.text-orange-400 Bienes
             span.font-normal.text-black Raíces
-        h2.text-center.text-2xl.font-extrabold= pagina
+        h2.text-center.text-2xl.font-normal.text-black Por favor ingresa cuidadosamente tus datos
 
-        .mt-8.mx-auto.max-w-md 
-            .bg-white.py-8.px-4.shadow-xl.rounded-xl
-                form.space-y-5
-                    div
-                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="nombre") Nombre Completo
-                        input#nombre.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Tu Nombre" type="text" name="nombre")
-                    
-                    div
-                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="email") Email de Registro
-                        input#email.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Tu Email" type="email" name="email")
+        .mt-8.mx-auto.max-w-xl
+            .bg-white.py-8.px-4.shadow-2xl.rounded-2xl
+                form.space-y-5 
+                        div.px-5 
+                            label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="nombreUsuario") nombre completo:
+                            input#nombreUsuario(type="text" class="hover:inset-shadow-sm focus:inset-shadow-xl focus:inset-shadow-orange-300 focus:outline-none" placeholder="p.e.: Marco Antonio Ramírez Hernández" name="usuarioNombre").w-full.hover.border.border-gray-300.px-3.py-2.rounded-xl.placeholder-gray-400
+                        
+                        div.px-5 
+                            label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="emailUsuario") correo electrónico:
+                            input#emailUsuario(type="email" class="hover:inset-shadow-sm focus:inset-shadow-xl focus:inset-shadow-orange-300 focus:outline-none" placeholder="p.e.: correo@dominio.com" name="emailUsuario").w-full.hover.border.border-gray-300.px-3.py-2.rounded-xl.placeholder-gray-400
+                        
+                        div.px-5
+                            label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="passwordUsuario") Contraseña:
+                            input#passwordUsuario.w-full.border.border-gray-300.px-3.py-2.rounded-xl.placeholder-gray-400(placeholder= "Por los menos 8 carácteres" name="passwordUsuario" type="password"         class="hover:inset-shadow-sm focus:inset-shadow-md focus:inset-shadow-orange-300/50 focus:outline-none")
 
-                    div
-                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="password") Password
-                        input#password.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Tu Password" type="password" name="password")
+                        div.px-5
+                            label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="confirmacionUsuario") Confirmación de Contraseña:
+                            input#confirmacionUsuario.w-full.border.border-gray-300.px-3.py-2.rounded-xl.placeholder-gray-400(               placeholder= "Repite la contraseña anterior"            name="confirmacionUsuario" type="password" class="hover:inset-shadow-sm focus:inset-shadow-md focus:inset-shadow-orange-300/50 focus:outline-none")
+                        
+                        div.flex.justify-center.py-6
+                            input(class="w-3/4 bg-gray-300 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-3 cursor-pointer rounded-4xl shadow-lg uppercase transition-all.duration-200" type="submit" value="Registrar Usuario")
 
-                    div
-                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="repetir_password") Repetir Password
-                        input#repetir_password.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Repite tu Password" type="password" name="repetir_password")
+                        div.flex.items-center.justify-between.pt-3
+                            a(class="text-gray-500 text-sm hover:decoration-orange-400 hover:underline transition decoration-2" href="/auth/login") ¿Ya tienes cuenta? Inicia Sesión
+                            a(class="text-gray-500 text-sm hover:decoration-orange-400 hover:underline transition decoration-2" href="/auth/recuperarPassword") ¿Olvidaste tu contraseña? Recuperala
 
-                    div.flex.items-center.justify-between 
-                        a.text-gray-500.text-xs(href="/auth/login") ¿Ya tienes cuenta? Inicia Sesión
-                        a.text-gray-500.text-xs(href="/auth/olvide-password") Olvidé mi Password
 
-                    input(class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 cursor-pointer uppercase rounded-lg" type="submit" value="Crear Cuenta")
