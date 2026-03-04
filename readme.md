@@ -14,11 +14,11 @@ El proyecto estará basado en una Arquitectura SOA (Service Oriented Architectur
 
 |No.|Descripción|Potenciador|Estatus|
 |---|---|---|---|
-|1.| Configuración inicial del Proyecto (NodeJS) | 2 | ✅ Finalizado |
-|2.| Routing y Requests (Peticiones) | 5 | ✅ Finalizado |
-|3.| Layouts, Template Engines y Tailwind CSS (Frontend)| 5 | ✅ Finalizado |
+|1.| Configuración inicial del Proyecto (NodeJS) | 2 | ✅ Finalizado. |
+|2.| Routing y Requests (Peticiones) | 5 | ✅ Finalizado. |
+|3.| Layouts, Template Engines y Tailwind CSS (Frontend)| 5 | ✅ Finalizado. |
 |4.| Creación de páginas de Login y Creación de Usuarios| 6 | ✅ Finalizado. |
-|5.| ORM's y Bases de Datos | ❌ | ❌ |
+|5.| ORM's y Bases de Datos | 7 | ✅ Finalizado. |
 |6.| Insertando Registros en la Tabla Usuarios| ❌ | ❌ |
 |7.| Implementación de la Fucnionalidad (Feature) Recuperación de Contraseña (Password Recovery)| ❌ | ❌ |
 |8.| Autentificación de Usuarios (auth)| ❌ | ❌ |
